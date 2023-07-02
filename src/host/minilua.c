@@ -4607,9 +4607,11 @@ else{
 nret=explist1(ls,&e);
 if(hasmultret(e.k)){
 luaK_setmultret(fs,&e);
+/*
 if(e.k==VCALL&&nret==1){
 SET_OPCODE(getcode(fs,&e),OP_TAILCALL);
 }
+//*/
 first=fs->nactvar;
 nret=(-1);
 }
